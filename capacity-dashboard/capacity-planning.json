@@ -41,7 +41,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "description": "",
       "format": "percentunit",
       "gauge": {
@@ -205,7 +205,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "format": "percentunit",
       "gauge": {
         "maxValue": 1,
@@ -286,7 +286,7 @@
         "#052b51",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "decimals": 2,
       "description": "What has been promised",
       "format": "bytes",
@@ -369,7 +369,7 @@
         "#58140c",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "description": "What developers estimate they will need",
       "format": "bytes",
       "gauge": {
@@ -545,7 +545,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "format": "percentunit",
       "gauge": {
         "maxValue": 1,
@@ -707,7 +707,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "description": "OS and Container CPU usage",
       "format": "percentunit",
       "gauge": {
@@ -872,7 +872,7 @@
         "#58140c",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "decimals": null,
       "description": "What developers estimate they will need",
       "format": "none",
@@ -955,7 +955,7 @@
         "#3f6833",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "$datasource",
       "format": "none",
       "gauge": {
         "maxValue": 100,
