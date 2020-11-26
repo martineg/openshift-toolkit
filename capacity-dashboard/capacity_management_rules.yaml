@@ -18,7 +18,7 @@ spec:
         sum (kube_node_labels * on (node) group_left () sum (kube_pod_container_resource_requests_cpu_cores) by (node)) by (label_nodegroup)
     - record: usage_sum:cpu:by_nodegroup
       expr: >
-        sum (kube_node_labels * on (node) group_left () sum (rate (container_cpu_usage_seconds_total{container_name=~".+", container_name!="POD"} [1m])) by (node)) by (label_nodegroup)
+        sum (kube_node_labels * on (node) group_left () sum (rate (container_cpu_usage_seconds_total{container=~".+", container!="POD"} [1m])) by (node)) by (label_nodegroup)
     - alert: HighCPUQuotaGranted
       expr: (quota_sum:cpu:by_nodegroup / allocatable_sum:cpu:by_nodegroup) > 1
       for: 1h
@@ -46,7 +46,7 @@ spec:
         sum (kube_node_labels * on (node) group_left () sum (kube_pod_container_resource_requests_memory_bytes) by (node)) by (label_nodegroup)
     - record: usage_sum:memory:by_nodegroup
       expr: >
-        sum (kube_node_labels * on (node) group_left () sum(container_memory_usage_bytes{container_name=~".+", container_name!="POD"}) by (node)) by (label_nodegroup)
+        sum (kube_node_labels * on (node) group_left () sum(container_memory_usage_bytes{container=~".+", container!="POD"}) by (node)) by (label_nodegroup)
     - alert: HighMemoryQuotaGranted
       expr: (quota_sum:memory:by_nodegroup / allocatable_sum:memory:by_nodegroup) > 1
       for: 1h
